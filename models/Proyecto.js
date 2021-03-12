@@ -32,6 +32,7 @@ const Proyecto = sequelize.define('Proyecto', {
   prioridad: DataTypes.STRING,
   estado: DataTypes.STRING,
   fechaCreacion: DataTypes.STRING,
+  fechaFinalizacion: DataTypes.STRING,
   idAsignado : DataTypes.STRING,
   idCreador : DataTypes.STRING
   // le decimos a que tabla de nuestra base de datos corresponde.
