@@ -27,11 +27,7 @@ const Sequelize = require('sequelize')
 
 var isProduction = process.env.NODE_ENV === 'production';
 
-const sequelize = new Sequelize('bbz0ggoqfczud69fyzdx', 'ugv1lnplmdb3j665', 'pMzHTfORFBKRNiubOXI5', {
-  host: 'bbz0ggoqfczud69fyzdx-mysql.services.clever-cloud.com',
-  // una de estas opciones dependiendo el gestor de la base
-  dialect: 'mysql',
-})
+const sequelize = new Sequelize(process.env.MYSQL_URI);
 
 sequelize.authenticate()
 .then(() => {
