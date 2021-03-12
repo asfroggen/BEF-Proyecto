@@ -11,7 +11,6 @@ const {
 router.get('/', obtenerProyectos)
 router.post('/', crearProyecto)
 router.put('/:id', modificarProyecto)
-router.put('/:id', finalizarProyecto)
 router.delete('/:id', eliminarProyecto)
 
 module.exports = router;

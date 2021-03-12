@@ -37,17 +37,6 @@ const Proyecto = sequelize.define('Proyecto', {
   // le decimos a que tabla de nuestra base de datos corresponde.
 },{ tableName: 'proyectos'});
 
-Proyecto.hasOne(idAsignado)
-Proyecto.belongsTo(Usuario, {
-  as: 'idAsignado',
-  foreignKey: 'idUsuario'
-});
-
-Proyecto.hasOne(idCreador)
-Proyecto.belongsTo(Usuario, {
-  as: 'idCreador',
-  foreignKey: 'idUsuario'
-});
 
 // exportamos el modelo.
 module.exports = Proyecto;
